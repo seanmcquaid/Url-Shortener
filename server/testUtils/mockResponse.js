@@ -1,8 +1,10 @@
 const sinon = require('sinon');
 
-const mockResponse = () => ({
-  status: sinon.spy(),
-  send: sinon.spy(),
-});
+function mockResponse() {
+  return {
+    status: sinon.stub().returnsThis(),
+    send: sinon.stub().returnsThis(),
+  };
+}
 
 module.exports = mockResponse;

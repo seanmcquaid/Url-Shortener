@@ -22,7 +22,7 @@ exports.postUrl = async (req, res, next) => {
 exports.getRedirectUrl = async (req, res, next) => {
   const { id } = req.params;
   try {
-    const result = Urls.findAll({ where: { id } });
+    const result = await Urls.findOne({ where: { id } });
 
     return res.status(200).send({
       result,

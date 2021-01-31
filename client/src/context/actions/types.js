@@ -1,0 +1,3 @@
+export const ADD_URL_LOADING = 'ADD_URL_LOADING';
+export const ADD_URL_SUCCESS = 'ADD_URL_SUCCESS';
+export const ADD_URL_ERROR = 'ADD_URL_ERROR';

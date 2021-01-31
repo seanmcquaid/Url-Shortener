@@ -8,7 +8,7 @@ export const initialState = {
   isLoading: false,
   urlId: '',
   originalUrl: '',
-  error: null,
+  error: '',
 };
 
 const reducer = (state = initialState, action) => {
@@ -17,6 +17,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
+        error: '',
       };
     case ADD_URL_SUCCESS:
       return {

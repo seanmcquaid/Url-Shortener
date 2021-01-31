@@ -11,7 +11,7 @@ describe('reducer', () => {
       isLoading: false,
       urlId: '',
       originalUrl: '',
-      error: null,
+      error: '',
     };
     const action = {
       type: ADD_URL_LOADING,
@@ -20,7 +20,7 @@ describe('reducer', () => {
       isLoading: true,
       urlId: '',
       originalUrl: '',
-      error: null,
+      error: '',
     });
   });
 
@@ -29,7 +29,7 @@ describe('reducer', () => {
       isLoading: true,
       urlId: '',
       originalUrl: '',
-      error: null,
+      error: '',
     };
     const action = {
       payload: {
@@ -42,7 +42,7 @@ describe('reducer', () => {
       isLoading: false,
       urlId: '1',
       originalUrl: 'fakeurl.com',
-      error: null,
+      error: '',
     });
   });
 
@@ -51,7 +51,7 @@ describe('reducer', () => {
       isLoading: true,
       urlId: '',
       originalUrl: '',
-      error: null,
+      error: '',
     };
     const action = {
       payload: {
@@ -72,7 +72,7 @@ describe('reducer', () => {
       isLoading: true,
       urlId: '1',
       originalUrl: '',
-      error: null,
+      error: '',
     };
     const action = {
       type: 'Default',
@@ -81,7 +81,7 @@ describe('reducer', () => {
       isLoading: true,
       urlId: '1',
       originalUrl: '',
-      error: null,
+      error: '',
     });
   });
 });

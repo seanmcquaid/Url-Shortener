@@ -1,7 +1,7 @@
 import { createContext, useReducer } from 'react';
 import reducer, { initialState } from './reducer';
 
-const Context = createContext();
+export const AppContext = createContext();
 
 const GlobalContext = ({ preloadedState, children }) => {
   const [state, dispatch] = useReducer(
@@ -10,7 +10,9 @@ const GlobalContext = ({ preloadedState, children }) => {
   );
 
   return (
-    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
+    <AppContext.Provider value={{ state, dispatch }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

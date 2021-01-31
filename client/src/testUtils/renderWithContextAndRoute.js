@@ -1,7 +1,7 @@
 import MockRouter from './MockRouter';
 import GlobalContext from '../context';
 import { render } from '@testing-library/react';
-import Routes from '../routes';
+import Routes from '../Routes';
 
 const renderWithContextAndRoute = (initialState, initialRoute) => {
   render(

@@ -25,7 +25,10 @@ describe('<Home/>', () => {
     );
 
     userEvent.type(
-      screen.getByPlaceholderText('Enter url here'),
+      screen.getByPlaceholderText('Enter your URL here'),
+      'fakeurl.com'
+    );
+    expect(screen.getByPlaceholderText('Enter your URL here').value).toEqual(
       'fakeurl.com'
     );
 

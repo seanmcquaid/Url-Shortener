@@ -33,6 +33,6 @@ describe('<FinalUrl/>', () => {
       '/finalUrl'
     );
 
-    expect(screen.getByText(`Characters Saved : -35`)).toBeInTheDocument();
+    expect(screen.getByText(`Characters Saved : -47`)).toBeInTheDocument();
   });
 });

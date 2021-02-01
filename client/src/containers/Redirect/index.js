@@ -1,9 +1,12 @@
-import styled from 'styled-components';
+import { useParams } from 'react-router-dom';
+import useRedirect from '../../hooks/useRedirect';
 
 const Redirect = () => {
-  return <PageContainer></PageContainer>;
-};
+  const { id } = useParams();
 
-const PageContainer = styled.div``;
+  useRedirect(id);
+
+  return null;
+};
 
 export default Redirect;

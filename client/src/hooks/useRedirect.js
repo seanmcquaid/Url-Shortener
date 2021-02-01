@@ -4,7 +4,7 @@ import services from '../services';
 const useRedirect = (id) => {
   useEffect(() => {
     services.getRedirectUrl(id).then(({ data }) => {
-      window.location.replace(data.result.originalUrl);
+      window.location.replace(data.result.url);
     });
   }, [id]);
 

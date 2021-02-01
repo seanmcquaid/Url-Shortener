@@ -7,6 +7,7 @@ import Form from './Form';
 
 const Home = () => {
   const { state } = useContext(AppContext);
+
   return (
     <PageContainer>
       <Header>

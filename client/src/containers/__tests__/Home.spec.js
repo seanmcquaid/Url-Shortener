@@ -21,7 +21,7 @@ describe('<Home/>', () => {
         isLoading: false,
         urlId: '',
         originalUrl: '',
-        error: null,
+        error: '',
       },
       '/'
     );
@@ -38,6 +38,36 @@ describe('<Home/>', () => {
 
     await waitFor(() =>
       expect(screen.getByText('Final Url')).toBeInTheDocument()
+    );
+  });
+
+  it('Error message displays', async () => {
+    jest.spyOn(axios, 'post').mockRejectedValue({});
+
+    renderWithContextAndRoute(
+      {
+        isLoading: false,
+        urlId: '',
+        originalUrl: '',
+        error: '',
+      },
+      '/'
+    );
+
+    userEvent.type(
+      screen.getByPlaceholderText('Enter your URL here'),
+      'fakeurl.com'
+    );
+    expect(screen.getByPlaceholderText('Enter your URL here').value).toEqual(
+      'fakeurl.com'
+    );
+
+    userEvent.click(screen.getByText('Submit'));
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('There was a problem trying to shorten this url')
+      ).toBeInTheDocument()
     );
   });
 });

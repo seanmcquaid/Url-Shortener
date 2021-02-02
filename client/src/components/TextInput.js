@@ -15,9 +15,22 @@ const TextInput = memo(({ onChange, label, name, value, placeholder }) => (
   </Label>
 ));
 
-const Label = styled.label``;
+const Label = styled.label`
+  font-family: 'Asap', sans-serif;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column
+  justify-content: center;
+  align-items: center;
+`;
 
-const Input = styled.input``;
+const Input = styled.input`
+  font-family: 'Asap', sans-serif;
+  padding: 0.5rem;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 8px;
+`;
 
 TextInput.propTypes = {
   onChange: propTypes.func.isRequired,

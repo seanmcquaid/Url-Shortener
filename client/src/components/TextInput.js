@@ -30,6 +30,7 @@ const Input = styled.input`
   border: 2px solid black;
   outline: none;
   border-radius: 8px;
+  width: 15rem;
 `;
 
 TextInput.propTypes = {

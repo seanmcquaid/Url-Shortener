@@ -27,10 +27,19 @@ const FinalUrl = () => {
   );
 };
 
-const PageContainer = styled.div``;
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  padding: 1rem;
+`;
 
-const Main = styled.main``;
+const Main = styled.main`
+  padding: 1rem;
+`;
 
 export default FinalUrl;

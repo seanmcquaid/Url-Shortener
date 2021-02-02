@@ -6,6 +6,7 @@ const P = memo(({ children }) => <StyledP>{children}</StyledP>);
 const StyledP = styled.p`
   font-family: 'Asap', sans-serif;
   color: white;
+  margin: 0.5rem;
 `;
 
 export default P;

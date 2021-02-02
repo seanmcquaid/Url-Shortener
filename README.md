@@ -10,6 +10,8 @@ This project is super simple, this is a kind of recreation of the same concept a
 2. Context API
 3. React Router Dom
 4. Styled Components
+5. Axios
+6. Prop Types
 
 ### Front End Testing
 
